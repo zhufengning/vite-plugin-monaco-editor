@@ -1,6 +1,6 @@
 {
   "name": "@akrc/vite-plugin-monaco-editor",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A vite plugin for the Monaco Editor",
   "type": "module",
   "scripts": {
