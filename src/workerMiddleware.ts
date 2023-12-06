@@ -1,6 +1,6 @@
 import { Connect, ResolvedConfig } from 'vite';
-import { getWorks, IMonacoEditorOpts, isCDN, resolveMonacoPath } from './index';
-import { IWorkerDefinition, languageWorksByLabel } from './lnaguageWork';
+import { getWorks, IMonacoEditorOpts, isCDN, resolveMonacoPath } from './index.js';
+import { IWorkerDefinition } from './languageWork.js';
 import * as esbuild from 'esbuild'
 import * as fs from 'fs';
 import * as path from 'path'

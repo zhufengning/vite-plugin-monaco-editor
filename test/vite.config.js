@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
-import monacoEditorPlugin from '../dist/index';
+import monacoEditorPlugin from '../dist/index.js';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-console.log(path.resolve(__dirname, 'src/worker/share.worker'));
+const dirname = fileURLToPath(new URL('.', import.meta.url));
+
 export default defineConfig({
   root: 'test',
   // base: 'sub',
@@ -26,7 +28,7 @@ export default defineConfig({
         },
         {
           label: 'share',
-          entry: path.resolve(__dirname, 'src/worker/share.worker'),
+          entry: path.resolve(dirname, 'src/worker/share.worker'),
         },
       ],
     }),

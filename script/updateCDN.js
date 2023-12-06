@@ -1,5 +1,6 @@
-import { copySync } from "fs-extra"
+import { createRequire } from "module"
 
-copySync("test/dist/a/monacoeditorwork", "cdn", {
-    
-})
+const require = createRequire(import.meta.url)
+const { copySync } = require("fs-extra")
+
+copySync("test/dist/a/monacoeditorwork", "cdn", {})

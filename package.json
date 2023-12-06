@@ -2,9 +2,7 @@
   "name": "vite-plugin-monaco-editor",
   "version": "1.1.0",
   "description": "A vite plugin for the Monaco Editor",
-  "main": "dist/index.js",
   "type": "module",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run copy:cdn",
@@ -18,7 +16,7 @@
     "dist",
     "cdn"
   ],
-  "author": "china-bin",
+  "author": "china-bin && akarachen",
   "license": "MIT",
   "keywords": [
     "vite-plugin",
@@ -27,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vdesjs/vite-plugin-monaco-editor"
+    "url": "https://github.com/akarachen/vite-plugin-monaco-editor"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -42,18 +40,14 @@
     "http-server": "^13.0.2",
     "monaco-editor": "^0.33.0",
     "monaco-graphql": "^0.4.4",
-    "typescript": "^4.3.5",
-    "vite": "^2.4.4",
+    "typescript": "^4.9.5",
+    "vite": "^2.9.16",
     "vue": "^3.1.5",
     "vue-router": "^4.0.12"
   },
   "peerDependencies": {
     "monaco-editor": ">=0.33.0"
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  }
+  "module": "./dist/index.js",
+  "types": "dist/index.d.ts"
 }

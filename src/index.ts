@@ -1,10 +1,13 @@
 import { HtmlTagDescriptor, Plugin, ResolvedConfig } from 'vite';
 import * as path from 'path';
 import * as fs from 'fs';
+import { createRequire } from 'module';
 
-import { EditorLanguageWorks, IWorkerDefinition, languageWorksByLabel } from './lnaguageWork';
-import { workerMiddleware, cacheDir, getFilenameByEntry, getWorkPath } from './workerMiddleware';
-const esbuild = require('esbuild');
+import { EditorLanguageWorks, IWorkerDefinition, languageWorksByLabel } from './languageWork.js';
+import { workerMiddleware, cacheDir, getFilenameByEntry, getWorkPath } from './workerMiddleware.js';
+import * as esbuild from 'esbuild';
+
+const require = createRequire(import.meta.url);
 
 /**
  * Return a resolved path for a given Monaco file.
