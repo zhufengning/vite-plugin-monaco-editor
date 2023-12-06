@@ -48,6 +48,10 @@
   "peerDependencies": {
     "monaco-editor": ">=0.33.0"
   },
-  "module": "./dist/index.js",
-  "types": "dist/index.d.ts"
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
 }
